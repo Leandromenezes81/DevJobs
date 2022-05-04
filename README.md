@@ -8,6 +8,8 @@
 ## Conexão segura com DataBase
 
 <p>dotnet user-secrets init</p>
+
 ## Configuração de StringConnection no Linux
+
 <p>dotnet user-secrets set "ConnectionStrings:DevJobsCs" "Data Source=localhost;Initial Catalog=DevJobsDb;User ID=sa;Password=************"</p>
 
