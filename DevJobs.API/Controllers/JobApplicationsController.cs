@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DevJobs.API.Entities;
 using DevJobs.API.Models;
 using DevJobs.API.Persistence;
@@ -36,7 +32,8 @@ public class JobApplicationsController : ControllerBase
             id
         );
 
-        jobVacancy.Applications.Add(application);
+        _context.JobApplications.Add(application);
+        _context.SaveChanges();
 
         return NoContent();
     }

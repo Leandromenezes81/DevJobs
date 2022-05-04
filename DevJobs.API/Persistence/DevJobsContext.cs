@@ -15,6 +15,7 @@ public class DevJobsContext: DbContext
     protected override void OnModelCreating(ModelBuilder builder){
         builder.Entity<JobVacancy>(e => {
             e.HasKey(jv => jv.Id);
+            // e.ToTable("tb_JobVacancies");
             e.HasMany(jv => jv.Applications)
                 .WithOne()
                 .HasForeignKey(ja => ja.IdJobVacancy)
