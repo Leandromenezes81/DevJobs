@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DevJobs.API.Entities;
+ using DevJobs.API.Entities;
 
 namespace DevJobs.API.Persistence.Repositories;
 

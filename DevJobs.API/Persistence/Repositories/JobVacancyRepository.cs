@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DevJobs.API.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace DevJobs.API.Persistence.Repositories;
 
@@ -16,26 +13,31 @@ public class JobVacancyRepository : IJobVacancyRepository
     }
     public void Add(JobVacancy jobVacancy)
     {
-        throw new NotImplementedException();
+        _context.JobVacancies.Add(jobVacancy);
+        _context.SaveChanges();
     }
 
     public void AddApplication(JobApplication jobApplication)
     {
-        throw new NotImplementedException();
+        _context.JobApplications.Add(jobApplication);
+        _context.SaveChanges();
     }
 
     public List<JobVacancy> GetAll()
     {
-        throw new NotImplementedException();
+        return _context.JobVacancies.ToList();
     }
 
     public JobVacancy GetById(int id)
     {
-        throw new NotImplementedException();
+        return _context.JobVacancies
+        .Include(jv => jv.Applications)
+        .SingleOrDefault(jv => jv.Id == id);
     }
 
     public void Update(JobVacancy jobVacancy)
     {
-        throw new NotImplementedException();
+        _context.JobVacancies.Update(jobVacancy);
+        _context.SaveChanges();
     }
 }
