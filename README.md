@@ -13,3 +13,8 @@
 
 <p>dotnet user-secrets set "ConnectionStrings:DevJobsCs" "Data Source=localhost;Initial Catalog=DevJobsDb;User ID=sa;Password=************"</p>
 
+## Configuração EF Core/ Migrations
+
+<p>dotnet tool install --global dotnet-ef</p>
+<p>dotnet ef migrations add InitialMigrations -o Persistence/Migrations</p>
+<p>dotnet ef database update</p>

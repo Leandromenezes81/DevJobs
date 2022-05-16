@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/leandro/Projetos/DevJobs/DevJobs.API/DevJobs.API.csproj": {}
+    "/home/leandro/Projects/DevJobs/DevJobs.API/DevJobs.API.csproj": {}
   },
   "projects": {
-    "/home/leandro/Projetos/DevJobs/DevJobs.API/DevJobs.API.csproj": {
+    "/home/leandro/Projects/DevJobs/DevJobs.API/DevJobs.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/leandro/Projetos/DevJobs/DevJobs.API/DevJobs.API.csproj",
+        "projectUniqueName": "/home/leandro/Projects/DevJobs/DevJobs.API/DevJobs.API.csproj",
         "projectName": "DevJobs.API",
-        "projectPath": "/home/leandro/Projetos/DevJobs/DevJobs.API/DevJobs.API.csproj",
+        "projectPath": "/home/leandro/Projects/DevJobs/DevJobs.API/DevJobs.API.csproj",
         "packagesPath": "/home/leandro/.nuget/packages/",
-        "outputPath": "/home/leandro/Projetos/DevJobs/DevJobs.API/obj/",
+        "outputPath": "/home/leandro/Projects/DevJobs/DevJobs.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/leandro/.nuget/NuGet/NuGet.Config"
@@ -38,23 +38,27 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.3.1, )"
             }
           },
           "imports": [
@@ -67,12 +71,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.2, 6.0.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
